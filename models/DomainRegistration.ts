@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { toUidFromSchema } from 'zenbox-util/uid'
+import { toUidFromSchema } from 'libs/utils/uid'
 import { DomainSchema } from './Domain'
 import { Id } from '../../generic/models/Id'
 
