@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import isValidDomain from 'is-valid-domain'
+import { z } from 'zod'
 
 export const DomainSchema = z.string().min(1).refine(isValidDomain)
 

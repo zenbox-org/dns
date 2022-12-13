@@ -1,7 +1,5 @@
 import { z } from 'zod'
-import { toUidFromSchema } from 'libs/utils/uid'
 import { DomainSchema } from './Domain'
-import { Id } from '../../generic/models/Id'
 
 export const DomainRegistrationSchema = z.object({
   domain: DomainSchema,
@@ -22,5 +20,5 @@ export function validateDomainRegistration(registration: DomainRegistration) {
 }
 
 export function getDomainRegistrationUid(registrationUid: DomainRegistrationUid) {
-  return toUidFromSchema(registrationUid, DomainRegistrationUidSchema)
+  return DomainRegistrationUidSchema.parse(registrationUid)
 }
